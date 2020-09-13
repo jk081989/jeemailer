@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html"  charset="utf-8">
+<title>Document</title>
+<link href='https://fonts.googleapis.com/css?family=Amita'
+	rel='stylesheet'>
+<!-- include libraries(jQuery, bootstrap) -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- include summernote css/js -->
+<link
+	href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
+<style>
+html, body {
+	height: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 22px;
+}
+
+.container {
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.img {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	padding: 10px 10px 0 0;
+}
+</style>
+</head>
+<body onload="loadCategories()">
+	<div class="container">
+		<h1>Mobi Boot Camp Corp</h1>
+		<h2>Mailer Page</h2>
+		<form action="/mailer/email" method="POST">
+			<div class="row">
+				<div class="col-md-6 form-group float-md-right">
+					<label for="subject">Subject:</label> <input type="text"
+						name="subject" class="form-control" id="subject">
+
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="categories">Email Groups</label> <select
+					id="recipient_categories" class="form-control"
+					name="recipient_category">
+
+				</select>
+
+			</div>
+			<div class="row form-group" style="min-width: 100%">
+				<label for="email_text">Email:</label>
+				<textarea id="summernote" name="email_text" id="email-text"
+					cols="30" rows="10"></textarea>
+			</div>
+			
+			
+			
+			
+			
+			<button type="submit" name="send" class="btn btn-submit">Send</button>
+		</form>
+
+
+
+
+	</div>
+	<script src="js/mailer.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#summernote').summernote();
+		});
+	</script>
+
+</body>
+</html>

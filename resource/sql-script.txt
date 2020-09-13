@@ -1,0 +1,19 @@
+Start MySQL database and then open MySQL console with
+/usr/local/mysql/bin/mysql -u root -p
+
+provide the password on the prompt
+
+CREATE Database mailer;
+
+USE mailer; 
+Drop TABLE If Exists Email;
+CREATE TABLE `email` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email_text` longblob NOT NULL,
+  `recipient_category` varchar(255) COLLATE utf8_bin NOT NULL,
+  `subject` varchar(255) COLLATE utf8_bin NOT NULL,
+  `tester_email` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `email_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+

@@ -1,0 +1,60 @@
+<html> 
+    <Body>
+        Login to Google cloud console<br>
+
+        gcloud projects list<br>
+
+    <h4> In bit bucket the project name is m-mailer. Get the url by logging into bitbucket and searching for your project</h4>
+
+        git clone https://mrireddy@bitbucket.org/jravi123/m-mailer.git<br>
+
+
+
+<h4> At Google cloud the same project is called flag-alert and this is in mbcc accoumt</h4>
+
+To see the current config settings use:<br>
+
+<b>gcloud config list</b><br>
+If the project that is set is not 'flag-alert', then set the project to flag-alert.<br>
+
+The below command sets the project to flag-alert <br>
+
+       <b> gcloud config set project flag-alert </b> <br>
+
+
+<h4> Before you build ensure that you are inside the m-mailer project in the console, which has the pom.xml </h4>
+
+        move to project m-mailer by executing<br>
+            'cd m-mailer'<br>
+
+       <h4> Using Maven build the project by using</h4>
+        `mvn clean pakage`
+
+<h4>Deploy to app engine (Production - google servers)</h4>
+`mvn appengine:deploy`
+
+
+
+        <h4>To start a local appengine, run:</h4>
+        `mvn appengine:run`<br>
+
+    This will start a local server at localhost:8080<br>
+
+    Admin console will be at localhost:8080/_ah/admin<br>
+
+
+<h4> git commit commands </h4>
+
+  Steps for commiting into git<br>
+
+  git status <br>
+  git pull origin master <br>
+  git add . --all<br>
+  git commit -m "changes"<br>
+  git push origin master<br>
+
+
+    </body>
+</html>
+
+
